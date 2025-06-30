@@ -1,6 +1,4 @@
-<!-- אתר 1: מסעדת "בשרי השלום" -->
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
+<!-- אתר 1: מסעדת "בשרי השלום" --><!DOCTYPE html><html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,17 +14,20 @@
       background-color: #333;
       padding: 1rem;
       text-align: center;
+      animation: fadeInDown 1s ease forwards;
     }
     header h1 {
       margin: 0;
       font-size: 2rem;
     }
     .hero {
-      background-image: url('https://images.unsplash.com/photo-1604908177522-f6b709be7ef5');
+      background-image: url('https://images.unsplash.com/photo-1605478522014-8a3e4bce5e0e?auto=format&fit=crop&w=1500&q=80');
       background-size: cover;
       background-position: center;
       padding: 5rem 1rem;
       text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s ease 0.5s forwards;
     }
     .hero h2 {
       font-size: 2rem;
@@ -42,13 +43,35 @@
     .menu-item {
       border-bottom: 1px solid #555;
       padding: 1rem 0;
+      transform: translateX(-20px);
+      opacity: 0;
+      animation: slideIn 0.8s ease forwards;
     }
+    .menu-item:nth-child(2) { animation-delay: 0.3s; }
+    .menu-item:nth-child(3) { animation-delay: 0.6s; }
+    .menu-item:nth-child(4) { animation-delay: 0.9s; }
+    .menu-item:nth-child(5) { animation-delay: 1.2s; }
     footer {
       background: #333;
       text-align: center;
       padding: 1rem;
       color: #aaa;
-    }
+      animation: fadeInUp 1s ease 1.5s forwards;
+    }@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes fadeInDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideIn {
+  to { transform: translateX(0); opacity: 1; }
+}
+
   </style>
 </head>
 <body>
@@ -80,79 +103,6 @@
   </section>
   <footer>
     &copy; 2025 בשרי השלום. כל הזכויות שמורות.
-  </footer>
-</body>
-</html>
-
-<!-- אתר 2: חוג הכדורגל "הכדורגלנייה השכונתית" -->
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>הכדורגלנייה השכונתית</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background-color: #f4f4f4;
-      color: #222;
-    }
-    header {
-      background-color: #2e7d32;
-      padding: 1rem;
-      color: white;
-      text-align: center;
-    }
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1603921326210-6edd2d60ca68');
-      background-size: cover;
-      background-position: center;
-      padding: 4rem 1rem;
-      text-align: center;
-      color: white;
-    }
-    .section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .times {
-      background: #e0e0e0;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    footer {
-      background: #2e7d32;
-      text-align: center;
-      padding: 1rem;
-      color: white;
-    }
-    .logo {
-      width: 80px;
-      margin-bottom: 0.5rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/861/861512.png" alt="לוגו כדורגל">
-    <h1>הכדורגלנייה השכונתית</h1>
-    <p>חוג כדורגל לבנים בגילאי 4–8</p>
-  </header>
-  <div class="hero">
-    <h2>בואו לשחק, להתפתח ולהנות – במגרש ליד בית הספר!</h2>
-  </div>
-  <section class="section">
-    <h2>מתי ואיפה?</h2>
-    <div class="times">
-      <p><strong>ימים:</strong> שני וחמישי</p>
-      <p><strong>שעות:</strong> 16:15–17:30</p>
-      <p><strong>מיקום:</strong> מגרש ליד בית הספר</p>
-    </div>
-  </section>
-  <footer>
-    &copy; 2025 הכדורגלנייה השכונתית
   </footer>
 </body>
 </html>
